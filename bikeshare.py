@@ -206,7 +206,7 @@ def display_raw_data(df):
     while True:
         raw_data = input(
             '\nWould you like to see the next five rows of the raw data? Enter yes or no.\n').lower()
-        pd.set_option('display.max_columns', 200)
+        pd.set_option('display.max_columns', 100)
         if raw_data != 'yes':
             return
         i += 5
