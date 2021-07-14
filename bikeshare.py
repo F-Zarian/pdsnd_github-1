@@ -146,7 +146,7 @@ def trip_duration_stats(df):
     print('Mean Travel Time (seconds):', avg_time)
 
     elapsed_time_secs = time.time() - start_time
-    print("\nThis took %s seconds." % round(elapsed_time_secs, 2))
+    print("\nThis took %s seconds." % round(elapsed_time_secs, 3))
     print('-'*40)
 
 
@@ -205,9 +205,7 @@ def display_raw_data(df):
     print(df.head())
     i = 0
     while True:
-        raw_data = input(
-            '\nWould you like to see the next five rows of the raw data? Enter yes or no.\n').lower()
-        pd.set_option('display.max_columns', 200)
+
         if raw_data != 'yes':
             return
         i += 5
